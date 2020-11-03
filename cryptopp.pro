@@ -11,9 +11,9 @@ TEMPLATE = lib
 
 DEFINES += CRYPTOPP_LIBRARY
 
-SOURCES += cryptopp.cpp
+SOURCES +=
 
-HEADERS += cryptopp.h\
+HEADERS +=\
         cryptopp_global.h
 
 symbian {

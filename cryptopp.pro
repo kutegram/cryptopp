@@ -67,4 +67,6 @@ unix:!symbian {
     INSTALLS += target
 }
 
+# added manually
+LIBS += -lws2_32
 CONFIG += warn_off

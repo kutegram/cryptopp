@@ -42,5 +42,5 @@ HEADERS += $$PWD/3way.h $$PWD/adler32.h $$PWD/aes.h $$PWD/algebra.h $$PWD/algpar
     $$PWD/winpipes.h $$PWD/words.h $$PWD/xtr.h $$PWD/xtrcrypt.h $$PWD/zdeflate.h $$PWD/zinflate.h $$PWD/zlib.h
 
 # added manually
-LIBS += -lws2_32
+win32:LIBS += -lws2_32
 CONFIG += warn_off

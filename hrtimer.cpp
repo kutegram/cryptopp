@@ -87,8 +87,10 @@ TimerWord Timer::TicksPerSecond()
 	return freq.QuadPart;
 #elif defined(CRYPTOPP_UNIX_AVAILABLE)
 	return 1000000;
+#elif defined(CLOCKS_PER_SEC)
+    return CLOCKS_PER_SEC;
 #else
-	return CLOCKS_PER_SEC;
+    return 500;
 #endif
 }
 
@@ -131,8 +133,10 @@ TimerWord ThreadUserTimer::TicksPerSecond()
 #elif defined(CRYPTOPP_UNIX_AVAILABLE)
 	static const long ticksPerSecond = sysconf(_SC_CLK_TCK);
 	return ticksPerSecond;
-#else
+#elif defined(CLOCKS_PER_SEC)
 	return CLOCKS_PER_SEC;
+#else
+    return 500;
 #endif
 }
 

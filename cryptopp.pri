@@ -44,3 +44,5 @@ HEADERS += $$PWD/3way.h $$PWD/adler32.h $$PWD/aes.h $$PWD/algebra.h $$PWD/algpar
 # added manually
 win32:LIBS += -lws2_32
 CONFIG += warn_off
+
+INCLUDEPATH += $$PWD
